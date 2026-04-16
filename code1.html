@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-surface": "#fcf9f8",
+            "surface-variant": "#262626",
+            "on-surface-variant": "#adaaaa",
+            "surface-container": "#1a1a1a",
+            "on-background": "#ffffff",
+            "on-primary-fixed-variant": "#0e009d",
+            "primary-container": "#9396ff",
+            "secondary-container": "#4d329b",
+            "background": "#0e0e0e",
+            "surface": "#0e0e0e",
+            "on-secondary-fixed": "#3a1b88",
+            "on-primary-fixed": "#000000",
+            "tertiary-fixed-dim": "#ee7ebc",
+            "on-error": "#490013",
+            "secondary-fixed-dim": "#cbbaff",
+            "error-dim": "#d73357",
+            "primary-fixed": "#9396ff",
+            "inverse-primary": "#494bd7",
+            "on-primary-container": "#0a0081",
+            "tertiary-dim": "#eb7bba",
+            "tertiary-fixed": "#fd8bca",
+            "outline": "#767575",
+            "on-surface": "#ffffff",
+            "on-tertiary-container": "#5e0042",
+            "on-secondary-fixed-variant": "#573da6",
+            "error": "#ff6e84",
+            "tertiary": "#ff9dd1",
+            "secondary-fixed": "#d8caff",
+            "tertiary-container": "#fa88c8",
+            "primary": "#a3a6ff",
+            "surface-container-lowest": "#000000",
+            "surface-container-low": "#131313",
+            "on-tertiary": "#6c0f4d",
+            "secondary": "#a98ffd",
+            "surface-container-highest": "#262626",
+            "on-secondary-container": "#d6c9ff",
+            "error-container": "#a70138",
+            "outline-variant": "#484847",
+            "on-error-container": "#ffb2b9",
+            "on-tertiary-fixed-variant": "#6d104e",
+            "primary-fixed-dim": "#8387ff",
+            "on-tertiary-fixed": "#360024",
+            "surface-dim": "#0e0e0e",
+            "surface-container-high": "#20201f",
+            "primary-dim": "#6063ee",
+            "surface-bright": "#2c2c2c",
+            "surface-tint": "#a3a6ff",
+            "secondary-dim": "#a68dfa",
+            "on-primary": "#0f00a4",
+            "on-secondary": "#280072",
+            "inverse-on-surface": "#565555"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .tonal-shift {
+      transition: background-color 0.3s ease;
+    }
+    .aura-blur {
+      filter: blur(120px);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- Atmospheric Aura -->
+<div class="fixed inset-0 overflow-hidden -z-10">
+<div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-secondary/10 aura-blur rounded-full"></div>
+<div class="absolute top-[20%] -right-[5%] w-[30%] h-[30%] bg-tertiary/5 aura-blur rounded-full"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-full font-['Manrope'] tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-[#a3a6ff]">Aether AI</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#adaaaa] hover:text-white transition-colors duration-300" href="#">Models</a>
+<a class="text-[#adaaaa] hover:text-white transition-colors duration-300" href="#">Workspace</a>
+<a class="text-[#a3a6ff] border-b-2 border-[#a3a6ff] pb-1 transition-colors duration-300" href="#">History</a>
+<a class="text-[#adaaaa] hover:text-white transition-colors duration-300" href="#">Library</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-[#adaaaa] hover:text-white transition-all scale-95 active:scale-90 duration-300">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/20">
+<img alt="User profile" data-alt="Close-up portrait of a professional user with soft studio lighting and a clean dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5c2qRtKVacLWKUv_Mnou_4dwy3Q4zlpS8YtPS984F6AIj9dUno4QughxglPAxvlbDrch3MZTJcXU300F70KHPosZaEG51R9hWMm907dDhf5hyFANAzqPUbZBbpNFMVsgA1CKnczuuEdwVxa8GfIuBFJMgG81XmUYwPZUi4TrvrkmBnTI-zO-kqQp_hPBMUCRXt3Caat-nWHAPIgnoJAKZZcc4czVsZdOf4DQPW2Y7WsW5dpnnBGHJSQB9KGUkrvQaph7AdkOaI1nT"/>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-2">Generation History</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl">Review and re-deploy your past architectural prompts and visual orchestrations.</p>
+</header>
+<!-- Search and Filter Bar -->
+<div class="flex flex-col md:flex-row gap-4 mb-8">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-highest border-none rounded-xl py-4 pl-12 pr-4 text-on-surface focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-outline" placeholder="Search by theme or prompt content..." type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-6 py-4 bg-surface-container-high text-on-surface rounded-xl hover:bg-surface-bright transition-colors border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+<span class="text-sm font-medium">All Types</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-4 bg-surface-container-high text-on-surface rounded-xl hover:bg-surface-bright transition-colors border border-outline-variant/10">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span class="text-sm font-medium">Last 30 Days</span>
+</button>
+</div>
+</div>
+<!-- History Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<article class="group bg-surface-container-low rounded-xl p-1 overflow-hidden transition-all duration-300 hover:bg-surface-container-high">
+<div class="bg-surface-container-low rounded-[10px] p-5 h-full flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1 block">Cyberpunk Forest</span>
+<p class="text-xs text-on-surface-variant">2 hours ago</p>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">image</span>
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">movie</span>
+</div>
+</div>
+<div class="flex-grow space-y-4 mb-6">
+<div class="p-3 bg-surface-container-highest/50 rounded-lg">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-outline-variant uppercase">Image Prompt</span>
+</div>
+<p class="text-sm text-on-surface line-clamp-2 italic leading-relaxed">"Bio-luminescent ferns growing through rusted chrome skeletons of ancient mechs, cinematic fog, neon teal highlights..."</p>
+</div>
+<div class="p-3 bg-surface-container-highest/50 rounded-lg">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-outline-variant uppercase">Video Prompt</span>
+</div>
+<p class="text-sm text-on-surface line-clamp-2 italic leading-relaxed">"Slow panning shot through the dense neon foliage, mechanical sparks flying from a damaged circuit tree..."</p>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant/10 mt-auto">
+<button class="flex-grow bg-gradient-to-br from-primary to-primary-dim text-on-primary text-xs font-bold py-2.5 rounded-[4px] hover:brightness-110 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">refresh</span>
+              REUSE
+            </button>
+<button class="px-3 py-2.5 bg-surface-container-highest text-on-surface rounded-[4px] hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group bg-surface-container-low rounded-xl p-1 overflow-hidden transition-all duration-300 hover:bg-surface-container-high">
+<div class="bg-surface-container-low rounded-[10px] p-5 h-full flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1 block">Minimalist Oasis</span>
+<p class="text-xs text-on-surface-variant">5 hours ago</p>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">image</span>
+</div>
+</div>
+<div class="flex-grow space-y-4 mb-6">
+<div class="aspect-video w-full rounded-lg overflow-hidden bg-surface-container-highest relative group">
+<img class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="Abstract minimalist digital art showing smooth flowing curves in lavender and deep indigo with soft grainy texture and studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPslsXJGzk1NWSjCTpD52H8Hv2if7J89CW7Eqt85l3JO85xfDtlbEyy9gAzsYOkGdhaa3ua7241AZHPr4Tobb7_w5jUBAPGmCHGKPPzBIaoL8tF9tYYtYNNsK6L2T31u-m18K5tLvNzxiaAR4PvqSBcswcG3Sgzwi0hgaRceAQOPvk1xIWNy26MjsCHgVTAecbiQ9qv1dcgsGFZXVV7JZZ77wFkAUof655iX9H3YfvGQ1qeZRGm9ju1Ok1HWqqhBGn_2tHzbgIu_Go"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+</div>
+<div class="p-3 bg-surface-container-highest/50 rounded-lg">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-outline-variant uppercase">Image Prompt</span>
+</div>
+<p class="text-sm text-on-surface line-clamp-2 italic leading-relaxed">"Hyper-realistic desert architecture, smooth concrete surfaces, hidden water pools, brutalist lighting..."</p>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant/10 mt-auto">
+<button class="flex-grow bg-gradient-to-br from-primary to-primary-dim text-on-primary text-xs font-bold py-2.5 rounded-[4px] hover:brightness-110 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">refresh</span>
+              REUSE
+            </button>
+<button class="px-3 py-2.5 bg-surface-container-highest text-on-surface rounded-[4px] hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group bg-surface-container-low rounded-xl p-1 overflow-hidden transition-all duration-300 hover:bg-surface-container-high">
+<div class="bg-surface-container-low rounded-[10px] p-5 h-full flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1 block">Galactic Baroque</span>
+<p class="text-xs text-on-surface-variant">Yesterday, 14:20</p>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">movie</span>
+</div>
+</div>
+<div class="flex-grow space-y-4 mb-6">
+<div class="p-3 bg-surface-container-highest/50 rounded-lg border-l-2 border-primary/30">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-outline-variant uppercase">Video Prompt</span>
+</div>
+<p class="text-sm text-on-surface line-clamp-4 italic leading-relaxed">"A grand ballroom floating in deep space, ornate gold filigree dissolving into nebula dust, dancers as silhouettes against a dying star, 8k resolution, ethereal motion..."</p>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant/10 mt-auto">
+<button class="flex-grow bg-gradient-to-br from-primary to-primary-dim text-on-primary text-xs font-bold py-2.5 rounded-[4px] hover:brightness-110 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">refresh</span>
+              REUSE
+            </button>
+<button class="px-3 py-2.5 bg-surface-container-highest text-on-surface rounded-[4px] hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="group bg-surface-container-low rounded-xl p-1 overflow-hidden transition-all duration-300 hover:bg-surface-container-high">
+<div class="bg-surface-container-low rounded-[10px] p-5 h-full flex flex-col">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-primary font-bold mb-1 block">Surrealist Anatomy</span>
+<p class="text-xs text-on-surface-variant">Yesterday, 09:12</p>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">image</span>
+</div>
+</div>
+<div class="flex-grow space-y-4 mb-6">
+<div class="p-3 bg-surface-container-highest/50 rounded-lg">
+<div class="flex items-center gap-2 mb-1">
+<span class="text-[10px] font-bold text-outline-variant uppercase">Image Prompt</span>
+</div>
+<p class="text-sm text-on-surface line-clamp-2 italic leading-relaxed">"The internal mechanics of a human heart depicted as a clockwork universe, brass gears, microscopic stars..."</p>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-4 border-t border-outline-variant/10 mt-auto">
+<button class="flex-grow bg-gradient-to-br from-primary to-primary-dim text-on-primary text-xs font-bold py-2.5 rounded-[4px] hover:brightness-110 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">refresh</span>
+              REUSE
+            </button>
+<button class="px-3 py-2.5 bg-surface-container-highest text-on-surface rounded-[4px] hover:bg-surface-bright transition-all">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-16">
+<nav class="flex items-center space-x-1 p-1 bg-surface-container-low rounded-xl border border-outline-variant/10">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold text-sm">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest transition-colors text-on-surface-variant text-sm font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest transition-colors text-on-surface-variant text-sm font-medium">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest transition-colors text-on-surface-variant text-sm font-medium">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-highest transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-[#0e0e0e] tonal-shift border-t border-[#484847]/15 flex flex-col items-center justify-center space-y-4 font-['Inter'] text-xs uppercase tracking-widest">
+<div class="flex flex-wrap justify-center gap-8 mb-4">
+<a class="text-[#adaaaa] hover:text-[#a3a6ff] transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#adaaaa] hover:text-[#a3a6ff] transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#adaaaa] hover:text-[#a3a6ff] transition-all opacity-80 hover:opacity-100" href="#">API Documentation</a>
+</div>
+<p class="text-[#adaaaa] opacity-80">© 2024 Aether AI. Engineered with Precision.</p>
+</footer>
+</body></html>
